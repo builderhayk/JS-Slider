@@ -1,0 +1,101 @@
+
+body {
+    /*background: #1a2a6c;  !* fallback for old browsers *!*/
+    /*background: -webkit-linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c);  !* Chrome 10-25, Safari 5.1-6 *!*/
+    /*background: linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+
+    background: url(images/back.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+#gallary {
+    /*Center*/
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+
+    display: flex;
+    flex-direction: row;
+
+    height: 340px;
+    width: 50%;
+    background: linear-gradient(to right top, #32003a, #41004a, #4f025a,
+    #550062, #550062, #720063, #8d0062, #a6005f, #d52d52, #ff9222);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 3px;
+}
+
+
+.gButton {
+    position: absolute;
+    top: 45%;
+
+    height: 40px;
+    width: 10%;
+
+    margin: 0;
+
+    background-color: #98387b;
+    border: none;
+    color: #ffe400;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    user-select: none;
+
+    z-index: 1;
+}
+
+#buttonRight {
+    right: 0;
+}
+
+#buttonLeft {
+    left: 0;
+}
+
+.imageS {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+
+    margin: 0;
+    position: absolute;
+
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    transform-style: preserve-3d;
+    transform: translateZ(-100px);
+    transition: transform 1s;
+}
+
+@keyframes anmRightOpen {
+    0% { width: 0px; height: 0px; transform: translateZ(0px) rotateY(   0deg); }
+    100% { width: 100%; height: 100%; transform: translateZ(-100px) rotateY(   0deg); }
+}
+
+@keyframes anmRightClose {
+    0% { width: 100%; right:0;  }
+    100% { width: 0px; right:0;  }
+}
+
+
+@keyframes anmLeftOpen {
+    0% { width: 0px; right:0; height: 0px;}
+    100% { width: 100%; right:0; height: 100%;}
+}
+
+@keyframes anmLeftClose {
+    0% { width: 100%; left:0;}
+    100% { width: 0px; left:0;}
+}
+
